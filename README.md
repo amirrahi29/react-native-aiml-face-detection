@@ -23,3 +23,26 @@ android {
   defaultConfig {
   ...
   missingDimensionStrategy 'react-native-camera', 'mlkit'
+  
+  
+  
+```
+add faceDetection\android\app\src\main\AndroidManifest.xml
+==========================================================================================
+apply plugin: 'com.google.android.gms.strict-version-matcher-plugin'
+
+```
+
+  <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    /* Include this only if you are planning to use the microphone for video recording */
+    <application
+    ...
+      <meta-data 
+      android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+      android:value="face" />
+      
+```
+
+
+
+

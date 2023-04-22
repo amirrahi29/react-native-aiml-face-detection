@@ -29,7 +29,6 @@ android {
 ```
 add faceDetection\android\app\src\main\AndroidManifest.xml
 ==========================================================================================
-apply plugin: 'com.google.android.gms.strict-version-matcher-plugin'
 
 ```
 
@@ -40,6 +39,18 @@ apply plugin: 'com.google.android.gms.strict-version-matcher-plugin'
       <meta-data 
       android:name="com.google.firebase.ml.vision.DEPENDENCIES"
       android:value="face" />
+      
+```
+
+Add dependency towards react-native-camera in your Podfile with subspecs using one of the following:
+==========================================================================================
+
+```
+
+pod 'react-native-camera', path: '../node_modules/react-native-camera', subspecs: [
+  'FaceDetectorMLKit'
+]
+    ...
       
 ```
 
